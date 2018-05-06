@@ -63,7 +63,7 @@ for epoch in range(10):
 w = np.transpose(w)
 
 
-#宣告eptest用來測試每個像素的值
+#宣告eptest用來測試並載入每個像素的值
 eptest = np.random.randn(300,400)
 #套用公式還原每個pixel的值
 for k in range(300):
@@ -85,6 +85,6 @@ print(w[0],"\n",w[1],"\n",w[2])
 
 eptest = np.array(eptest,dtype=np.uint8)
 
-etest = Image.fromarray(eptest)
+ans = Image.fromarray(eptest)
 
-etest.save("Iprime1.png")
+ans.save("Iprime1.png")
